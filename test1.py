@@ -1,6 +1,6 @@
 import requests
 import json
-
+import os
 # 响应返回模式
 # 流式，基于 SSE（Server-Sent Events）实现类似打字机输出方式的流式返回
 STREAMING_MODE="streaming"
@@ -8,7 +8,7 @@ STREAMING_MODE="streaming"
 BLOCKING_MODE="blocking"
 
 # 工作流的API_KEY
-API_KEY="{app-YpdtqjSP8SZnOyvgFw46HQfk}"
+API_KEY=os.getenv("DIFY_API_KEY")
 # Dify base_url，如果是本地部署，替换为 http://localhost/v1
 BASE_URL="https://api.dify.ai/v1"
 
